@@ -17,6 +17,12 @@
 		85AEE0C3290FD68900DB7356 /* PictureOfTheDayTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85AEE0C2290FD68900DB7356 /* PictureOfTheDayTests.swift */; };
 		85AEE0CD290FD68900DB7356 /* PictureOfTheDayUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85AEE0CC290FD68900DB7356 /* PictureOfTheDayUITests.swift */; };
 		85AEE0CF290FD68900DB7356 /* PictureOfTheDayUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85AEE0CE290FD68900DB7356 /* PictureOfTheDayUITestsLaunchTests.swift */; };
+		85AEE0E1290FD79800DB7356 /* DailyPictureViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85AEE0E0290FD79800DB7356 /* DailyPictureViewController.swift */; };
+		85AEE0E3290FD7C600DB7356 /* DailyPictureViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85AEE0E2290FD7C600DB7356 /* DailyPictureViewModel.swift */; };
+		85AEE0E5290FD7DB00DB7356 /* PictureData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85AEE0E4290FD7DB00DB7356 /* PictureData.swift */; };
+		85AEE0E7290FDD3500DB7356 /* Common.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85AEE0E6290FDD3500DB7356 /* Common.swift */; };
+		85AEE0E9290FDDEB00DB7356 /* DailyPictureResource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85AEE0E8290FDDEB00DB7356 /* DailyPictureResource.swift */; };
+		85AEE0EC290FDE8700DB7356 /* HttpUtility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85AEE0EB290FDE8700DB7356 /* HttpUtility.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +57,12 @@
 		85AEE0C8290FD68900DB7356 /* PictureOfTheDayUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PictureOfTheDayUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		85AEE0CC290FD68900DB7356 /* PictureOfTheDayUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PictureOfTheDayUITests.swift; sourceTree = "<group>"; };
 		85AEE0CE290FD68900DB7356 /* PictureOfTheDayUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PictureOfTheDayUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		85AEE0E0290FD79800DB7356 /* DailyPictureViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyPictureViewController.swift; sourceTree = "<group>"; };
+		85AEE0E2290FD7C600DB7356 /* DailyPictureViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyPictureViewModel.swift; sourceTree = "<group>"; };
+		85AEE0E4290FD7DB00DB7356 /* PictureData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PictureData.swift; sourceTree = "<group>"; };
+		85AEE0E6290FDD3500DB7356 /* Common.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Common.swift; sourceTree = "<group>"; };
+		85AEE0E8290FDDEB00DB7356 /* DailyPictureResource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyPictureResource.swift; sourceTree = "<group>"; };
+		85AEE0EB290FDE8700DB7356 /* HttpUtility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HttpUtility.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +113,12 @@
 		85AEE0A7290FD68400DB7356 /* PictureOfTheDay */ = {
 			isa = PBXGroup;
 			children = (
+				85AEE0EA290FDE7900DB7356 /* Services */,
+				85AEE0DF290FD74800DB7356 /* DataResource */,
+				85AEE0DE290FD74100DB7356 /* Utility */,
+				85AEE0DD290FD73B00DB7356 /* Model */,
+				85AEE0DC290FD73300DB7356 /* ViewModel */,
+				85AEE0DB290FD72C00DB7356 /* View */,
 				85AEE0A8290FD68400DB7356 /* AppDelegate.swift */,
 				85AEE0AA290FD68400DB7356 /* SceneDelegate.swift */,
 				85AEE0AC290FD68400DB7356 /* ViewController.swift */,
@@ -128,6 +146,54 @@
 				85AEE0CE290FD68900DB7356 /* PictureOfTheDayUITestsLaunchTests.swift */,
 			);
 			path = PictureOfTheDayUITests;
+			sourceTree = "<group>";
+		};
+		85AEE0DB290FD72C00DB7356 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				85AEE0E0290FD79800DB7356 /* DailyPictureViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		85AEE0DC290FD73300DB7356 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				85AEE0E2290FD7C600DB7356 /* DailyPictureViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		85AEE0DD290FD73B00DB7356 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				85AEE0E4290FD7DB00DB7356 /* PictureData.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		85AEE0DE290FD74100DB7356 /* Utility */ = {
+			isa = PBXGroup;
+			children = (
+				85AEE0E6290FDD3500DB7356 /* Common.swift */,
+			);
+			path = Utility;
+			sourceTree = "<group>";
+		};
+		85AEE0DF290FD74800DB7356 /* DataResource */ = {
+			isa = PBXGroup;
+			children = (
+				85AEE0E8290FDDEB00DB7356 /* DailyPictureResource.swift */,
+			);
+			path = DataResource;
+			sourceTree = "<group>";
+		};
+		85AEE0EA290FDE7900DB7356 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				85AEE0EB290FDE8700DB7356 /* HttpUtility.swift */,
+			);
+			path = Services;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -261,10 +327,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				85AEE0EC290FDE8700DB7356 /* HttpUtility.swift in Sources */,
+				85AEE0E7290FDD3500DB7356 /* Common.swift in Sources */,
 				85AEE0B3290FD68400DB7356 /* PictureOfTheDay.xcdatamodeld in Sources */,
+				85AEE0E5290FD7DB00DB7356 /* PictureData.swift in Sources */,
+				85AEE0E3290FD7C600DB7356 /* DailyPictureViewModel.swift in Sources */,
+				85AEE0E9290FDDEB00DB7356 /* DailyPictureResource.swift in Sources */,
 				85AEE0AD290FD68400DB7356 /* ViewController.swift in Sources */,
 				85AEE0A9290FD68400DB7356 /* AppDelegate.swift in Sources */,
 				85AEE0AB290FD68400DB7356 /* SceneDelegate.swift in Sources */,
+				85AEE0E1290FD79800DB7356 /* DailyPictureViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -446,6 +518,7 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -473,6 +546,7 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
