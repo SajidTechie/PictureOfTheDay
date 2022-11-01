@@ -1,1 +1,1 @@
-# PictureOfTheDay
+# APOD example project
