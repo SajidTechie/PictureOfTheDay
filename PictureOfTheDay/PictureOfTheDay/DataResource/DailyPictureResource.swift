@@ -19,8 +19,5 @@ struct DailyPictureResource
                 _ = completion(dailyPictureApiResponse)
             }
         }
-        catch let error {
-            debugPrint(error)
-        }
     }
 }

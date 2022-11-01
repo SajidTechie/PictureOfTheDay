@@ -8,13 +8,13 @@
 import Foundation
 
 struct PictureData: Decodable {
-    let copyright, date, explanation: String
+    let date, explanation: String
     let hdurl: String
     let mediaType, serviceVersion, title: String
     let url: String
 
     enum CodingKeys: String, CodingKey {
-        case copyright, date, explanation, hdurl
+        case date, explanation, hdurl
         case mediaType = "media_type"
         case serviceVersion = "service_version"
         case title, url
@@ -23,7 +23,7 @@ struct PictureData: Decodable {
     init(from decoder: Decoder) throws
     {
         let container = try decoder.container(keyedBy: CodingKeys.self)
-        self.copyright = try container.decode(String.self, forKey: .copyright)
+    
         self.date = try container.decode(String.self, forKey: .date)
         self.explanation = try container.decode(String.self, forKey: .explanation)
         self.hdurl = try container.decode(String.self, forKey: .hdurl)

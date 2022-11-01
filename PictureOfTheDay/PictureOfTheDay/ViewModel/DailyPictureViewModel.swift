@@ -17,7 +17,6 @@ struct DailyPictureViewModel
     
     func dailyPicture()
     {
-        
         //use DailyPictureResource to call picture API
         let dailyPictureResource = DailyPictureResource()
         dailyPictureResource.dailyPicture{ (dailyPictureApiResponse) in
