@@ -10,7 +10,6 @@
  */
 
 import UIKit
-import SDWebImage
 import CoreData
 
 class DailyPictureViewController: UIViewController {
@@ -107,7 +106,7 @@ extension DailyPictureViewController : PictureViewModelDelegate
             }
             
             
-            setData()
+            setApodData()
         
         }catch{
             debugPrint(error)
@@ -120,10 +119,10 @@ extension DailyPictureViewController : PictureViewModelDelegate
         self.fetchPicture()
         
         if(dailyPictureResponse != nil){
-            guard let objToUpdate = pictureResponse else { return }
-            objToUpdate.imageUrl = dailyPictureResponse?.url ?? ""
-            objToUpdate.title = dailyPictureResponse?.title ?? ""
-            objToUpdate.explanation = dailyPictureResponse?.explanation ?? ""
+            guard let pictureObj = pictureResponse else { return }
+            pictureObj.imageUrl = dailyPictureResponse?.url ?? ""
+            pictureObj.title = dailyPictureResponse?.title ?? ""
+            pictureObj.explanation = dailyPictureResponse?.explanation ?? ""
         }
         //save data
         do{
@@ -136,8 +135,16 @@ extension DailyPictureViewController : PictureViewModelDelegate
     }
     
     // - - - - setting image,title and explanation on daily picture view
-    func setData(){
-        self.imageView.sd_setImage(with: URL(string: pictureResponse?.imageUrl ?? ""), placeholderImage: UIImage(named: "no-photos"))
+    func setApodData(){
+        let imageLoadingTask = URLSession.shared.dataTask(with: URL(string: pictureResponse?.imageUrl ?? "")!) { data, response, error in
+                    guard let data = data, error == nil else { return }
+            
+                    DispatchQueue.main.async() {
+                        self.imageView.image = UIImage(data: data)
+                        }
+        }
+        imageLoadingTask.resume()
+        
         self.titleLabel.text = pictureResponse?.title ?? ""
         self.explanationTextView.text = pictureResponse?.explanation ?? ""
     }

@@ -247,7 +247,6 @@
 				85AEE0A1290FD68400DB7356 /* Sources */,
 				85AEE0A2290FD68400DB7356 /* Frameworks */,
 				85AEE0A3290FD68400DB7356 /* Resources */,
-				3F4A80E6D69381C0A540F1B4 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -285,7 +284,6 @@
 				85AEE0C4290FD68900DB7356 /* Sources */,
 				85AEE0C5290FD68900DB7356 /* Frameworks */,
 				85AEE0C6290FD68900DB7356 /* Resources */,
-				98A3A8BE319A939C2AE5978D /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -368,23 +366,6 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		3F4A80E6D69381C0A540F1B4 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-PictureOfTheDay/Pods-PictureOfTheDay-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-PictureOfTheDay/Pods-PictureOfTheDay-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-PictureOfTheDay/Pods-PictureOfTheDay-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		6F3A64D0044807A52814BF83 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -427,23 +408,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		98A3A8BE319A939C2AE5978D /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-PictureOfTheDay-PictureOfTheDayUITests/Pods-PictureOfTheDay-PictureOfTheDayUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-PictureOfTheDay-PictureOfTheDayUITests/Pods-PictureOfTheDay-PictureOfTheDayUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-PictureOfTheDay-PictureOfTheDayUITests/Pods-PictureOfTheDay-PictureOfTheDayUITests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		B66DE83E7B266A9A2D3CA4DA /* [CP] Check Pods Manifest.lock */ = {
